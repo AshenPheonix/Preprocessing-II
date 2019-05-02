@@ -10,3 +10,8 @@
     font-size: 2rem;
     border-radius:@br; 
 }
+
+.animator(@effect:background-color; @dur:2s){
+    -webkit-transition: @effect @dur;
+    transition: @effect @dur;
+}

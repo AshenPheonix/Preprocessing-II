@@ -210,6 +210,10 @@ header nav a {
 }
 header nav a:hover {
   border: #C0C0C0 2px dashed;
+  -webkit-transition: background-color, color 1s, 1s;
+  transition: background-color, color 1s, 1s;
+  background-color: #212529;
+  color: white;
 }
 @media (max-width: 500px) {
   header nav {
