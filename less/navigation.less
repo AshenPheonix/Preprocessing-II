@@ -21,20 +21,36 @@ header{
             font-size: @font-large;
         }
         a{
-            position: relative;
-            top:5px;
-            font-size:2rem;
+            font-size:@std-font;
             padding:.1rem 1.15rem;
             text-decoration: none;
             color:@font-color;
             &:hover{
                 border: @navigation-border 2px dashed;
-                .animator(background-color,color;1s,1s);
+                .animator(background-color,color; 1s, 1s);
                 background-color: @font-color;
                 color:white;
             }
         }
         
+        section{
+            .flex();
+            align-items: center;
+        }
+
+        @media @tab-size{
+            .flex(nowrap,column);
+            justify-content: center;
+            padding:.5rem;
+            h2{
+                align-self: flex-start;
+                font-size:@font-large;
+            }
+            section{
+                align-self: flex-end;
+            }
+        }
+
         @media @phone-size{
             .flex(nowrap,column);
             justify-content: center;
@@ -43,6 +59,10 @@ header{
                 margin:auto;
             }
         }
+    }
+    @media @tab-size{
+        width:@tab-size;
+        padding:.5rem;
     }
     @media @phone-size{
         width: @phone-size;

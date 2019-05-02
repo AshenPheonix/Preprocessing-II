@@ -168,6 +168,11 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
 @media (max-width: 500px) {
   .container {
     padding: 0 1rem;
@@ -198,11 +203,9 @@ header nav {
 }
 header nav h2 {
   color: #212529;
-  font-size: 4rem;
+  font-size: 7rem;
 }
 header nav a {
-  position: relative;
-  top: 5px;
   font-size: 2rem;
   padding: 0.1rem 1.15rem;
   text-decoration: none;
@@ -215,6 +218,28 @@ header nav a:hover {
   background-color: #212529;
   color: white;
 }
+header nav section {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  header nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  header nav h2 {
+    align-self: flex-start;
+    font-size: 7rem;
+  }
+  header nav section {
+    align-self: flex-end;
+  }
+}
 @media (max-width: 500px) {
   header nav {
     display: flex;
@@ -226,6 +251,12 @@ header nav a:hover {
   header nav h2,
   header nav section {
     margin: auto;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    width: (max-width: 800px);
+    padding: 0.5rem;
   }
 }
 @media (max-width: 500px) {
@@ -344,6 +375,11 @@ header nav a:hover {
 }
 .leadin img {
   padding: 1rem 0;
+}
+@media (max-width: 800px) {
+  .leadin {
+    padding: 1rem;
+  }
 }
 .btn {
   background-color: #17A2B8;
