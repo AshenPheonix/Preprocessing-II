@@ -1,1 +1,17 @@
 // Mixins in here
+.flex(@wrap:nowrap,@dir:row){
+    display: flex;
+    flex-wrap: @wrap;
+    flex-direction: @dir;
+}
+
+.button(@br:1rem){
+    background-color: @button-bg;
+    font-size: 2rem;
+    border-radius:@br; 
+}
+
+.animator(@effect:background-color; @dur:2s){
+    -webkit-transition: @effect @dur;
+    transition: @effect @dur;
+}
